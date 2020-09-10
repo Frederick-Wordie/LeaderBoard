@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vert_margin"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/min_margin"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/text_firstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_weight="0.5"
+                    android:maxLines="1"
+                    android:background="@drawable/textbox_shape"
+                    android:hint="@string/firstName"
+                    android:padding="@dimen/min_padding"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/text_lastName"
+                    android:maxLines="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="@string/lastName"
+                    android:background="@drawable/textbox_shape"
+                    android:padding="@dimen/min_padding"
+                    android:inputType="text" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/text_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vert_margin"
+                android:background="@drawable/textbox_shape"
+                android:maxLines="1"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/email"
+                android:inputType="textAutoComplete"
+                android:padding="@dimen/min_padding" />
+
+            <EditText
+                android:id="@+id/text_project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vert_margin"
+                android:background="@drawable/textbox_shape"
+                android:maxLines="1"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/project"
+                android:inputType="textAutoComplete"
+                android:padding="@dimen/min_padding" />
+
+            <Button
+                android:id="@+id/button_submit_project"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vert_margin"
+                android:layout_gravity="center"
+                android:padding="@dimen/min_padding"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:background="@drawable/action_button_orange"
+                android:text="Submit"
+                android:textColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+</LinearLayout>
