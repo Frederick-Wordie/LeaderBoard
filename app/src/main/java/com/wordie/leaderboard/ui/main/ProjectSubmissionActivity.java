@@ -45,7 +45,6 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
 
                 dialogUtility.SubmitProject(mEditTextFirstName.getText().toString(),mEditTextLastName.getText().toString(),
                         mEditTextEmail.getText().toString(),mEditProjectLink.getText().toString() ).show();
-                Toast.makeText(this, "All correct Sir", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
             }

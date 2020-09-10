@@ -36,5 +36,29 @@ public class DialogUtility {
             dialog.dismiss();
     });
         return dialog;
-}
+    }
+
+    public Dialog SuccessDialog(){
+        final Dialog dialog = new Dialog(context);
+        network = new LeaderBoardNetworkCalls(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.success_dialog);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+
+        return dialog;
+    }
+
+    public Dialog FailureDialog(){
+        final Dialog dialog = new Dialog(context);
+        network = new LeaderBoardNetworkCalls(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.failure_dialog);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+
+        return dialog;
+    }
 }

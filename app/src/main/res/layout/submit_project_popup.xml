@@ -27,7 +27,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_cancel"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginRight="10dp"
                 app:srcCompat="@drawable/ic_cancel" />
@@ -37,8 +37,8 @@
                 android:id="@+id/question_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
                 >
 
                 <TextView
@@ -46,17 +46,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Are You Sure"
+                    android:gravity="center"
+                    android:text="Are you sure"
                     android:textColor="@color/colorAsh"
+                    android:drawableEnd="@drawable/ic_question"
                     android:textSize="30sp"
                     android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/question_mark"
-                    android:layout_width="wrap_content"
-                    android:layout_height="60dp"
-                    android:layout_alignRight="@id/question"
-                    app:srcCompat="@drawable/ic_question" />
 
             </RelativeLayout>
 
@@ -68,14 +63,14 @@
 
                 <Button
                     android:id="@+id/button_submit"
-                    android:layout_width="100dp"
-                    android:layout_height="60dp"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
                     android:layout_alignBottom="@id/question_card"
                     android:layout_gravity="center"
                     android:background="@drawable/action_button_submit"
                     android:text="Yes"
                     android:textColor="@color/colorOrange"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

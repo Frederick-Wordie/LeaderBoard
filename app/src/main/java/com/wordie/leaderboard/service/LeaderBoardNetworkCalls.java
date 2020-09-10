@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.wordie.leaderboard.model.LeaderBoardDto;
+import com.wordie.leaderboard.ui.main.DialogUtility;
 
 import java.util.List;
 
@@ -66,18 +67,19 @@ public class LeaderBoardNetworkCalls {
     public void submitProject(String email, String firstName, String lastName, String projectLink){
         String newURL = "https://docs.google.com/forms/d/e/";
         ServiceBuilder.changeApiBaseUrl(newURL);
+        final DialogUtility dialog = new DialogUtility(context);
         LeaderBoardService leaderBoardService = ServiceBuilder.buildService(LeaderBoardService.class);
         Call<Void> request = leaderBoardService.submitProject(email,firstName,lastName,projectLink);
         request.enqueue(new Callback<Void>() {
 
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-                Toast.makeText(context, "Done Sending", Toast.LENGTH_SHORT).show();
+                dialog.SuccessDialog().show();
             }
 
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
-                Toast.makeText(context, "Sending failed", Toast.LENGTH_SHORT).show();
+                dialog.FailureDialog().show();
             }
         });
     }
