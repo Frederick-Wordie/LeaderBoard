@@ -84,7 +84,8 @@
                 android:minWidth="0dp"
                 android:background="@drawable/action_button_orange"
                 android:text="Submit"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/colorAccent"
+                android:textAllCaps="false"/>
 
 
         </LinearLayout>

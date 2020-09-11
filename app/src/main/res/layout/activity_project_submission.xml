@@ -27,7 +27,7 @@
                 <ImageView
                     android:id="@+id/badge"
                     android:layout_width="200dp"
-                    android:layout_height="79dp"
+                    android:layout_height="78dp"
                     android:layout_gravity="center"
                     android:src="@drawable/projectimg"
                     tools:background="@mipmap/ic_launcher" />
@@ -40,10 +40,15 @@
                     android:textSize="25sp"
                     android:text="Project Submission"
                     android:textColor="@color/colorOrange" />
-                <View
+
+                <ImageView
+                    android:id="@+id/divider_line"
                     android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="@color/colorOrange"/>
+                    android:layout_height="2dp"
+                    android:src="@drawable/divider"
+                    android:layout_below="@+id/title"
+                    />
+
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>
